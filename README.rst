@@ -1,6 +1,15 @@
 human_dates
 ===========
 
+This is a fork of the original package
+`human_dates <https://github.com/jtushman/human_dates>`_ made by Jonathan Tushman, but currently unmaintained.
+
+Already the original package was based on a `Stack Overflow
+answer <http://stackoverflow.com/a/1551394/192791>`_, referencing still another
+sources (check the post).
+
+---------
+
 I came from the Ruby/Rails world and I missed some of my date sugar.  And instead of keeping complaining about it, I
 thought I would do something about it
 
