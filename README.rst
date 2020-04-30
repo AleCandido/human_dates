@@ -1,7 +1,7 @@
 human_dates
 ===========
 
-.. image:: https://codecov.io/gh/codecov/human_dates/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/AleCandido/human_dates/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/AleCandido/human_dates
 
 This is a fork of the original package
