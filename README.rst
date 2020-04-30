@@ -1,6 +1,9 @@
 human_dates
 ===========
 
+.. image:: https://codecov.io/gh/codecov/human_dates/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/AleCandido/human_dates
+
 This is a fork of the original package
 `human_dates <https://github.com/jtushman/human_dates>`_ made by Jonathan Tushman, but currently unmaintained.
 
