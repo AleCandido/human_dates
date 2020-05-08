@@ -1,6 +1,9 @@
 name: deploy
 
-on: push
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   build-n-publish:
@@ -11,7 +14,7 @@ jobs:
         os: [ubuntu-latest]
         python-version: [3.8]
 
-    if: startsWith(github.event.ref, 'refs/tags')
+    #if: startsWith(github.event.ref, 'refs/tags')
 
     runs-on: ${{ matrix.os }}
 
