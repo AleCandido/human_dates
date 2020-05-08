@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 from pathlib import Path
+import importlib.metadata
+
+__version__ = importlib.metadata.version("human-dates2")
 
 here = Path(__file__).absolute().parent
 with open(here / "README.rst", encoding="utf-8") as f:
@@ -7,7 +10,7 @@ with open(here / "README.rst", encoding="utf-8") as f:
 
 setup(
     name="human-dates2",
-    version="0.1.7",
+    version=__version__,
     description="Dates for humans",
     long_description=long_description,
     url="https://github.com/AleCandido/human_dates",
