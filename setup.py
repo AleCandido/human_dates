@@ -7,7 +7,7 @@ with open(here / "README.rst", encoding="utf-8") as f:
 
 setup(
     name="human-dates2",
-    version="0.1.2",
+    version="0.1.4",
     description="Dates for humans",
     long_description=long_description,
     url="https://github.com/AleCandido/human_dates",
@@ -24,6 +24,7 @@ setup(
     packages=find_packages(where="src"),
     python_requires=">=3.6",
     install_requires=[],
+    setup_requires=["wheel"],
     project_urls={
         "Original SO": "http://stackoverflow.com/a/1551394/192791",
         "Original Package": "https://pypi.org/project/human_dates/0.1.0/",
