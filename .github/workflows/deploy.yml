@@ -1,4 +1,4 @@
-name: test
+name: deploy
 
 on:
   release:
@@ -32,9 +32,9 @@ jobs:
         python setup.py sdist
         # package the pure python wheel
         python setup.py bdist_wheel
-		- name: Publish package to TestPyPI
-			uses: pypa/gh-action-pypi-publish@master
-			with:
-				user: __token__
-				password: ${{ secrets.test_pypi_password }}
-				repository_url: https://test.pypi.org/legacy/
+    - name: Publish package to TestPyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.test_pypi_password }}
+        repository_url: https://test.pypi.org/legacy/
