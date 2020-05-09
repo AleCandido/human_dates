@@ -36,6 +36,12 @@ class TestBeginningOf:
         result = human_dates.beginning_of_minute(date)
         assert expected == result
 
+    def test_beginning_of_second(self):
+        date = dt.datetime.strptime("Jun 1 2005  1:33.123456PM", "%b %d %Y %I:%M.%f%p")
+        expected = dt.datetime.strptime("Jun 1 2005  1:33PM", "%b %d %Y %I:%M%p")
+        result = human_dates.beginning_of_second(date)
+        assert expected == result
+
 
 class TestEndOf:
     def test_end_of_year(self):
@@ -86,28 +92,10 @@ class TestEndOf:
         result = human_dates.end_of_minute(date)
         assert expected == result
 
-
-class TestTimeAgoInWords:
-    def test_time_years(self, time_words):
-        date = dt.datetime.now() - dt.timedelta(days=366 * 4)
-        expected = f"{time_words.past.pre}4 years{time_words.past.post}"
-        result = human_dates.time_ago_in_words(date)
-        assert expected == result
-
-    def test_time_weeks(self, time_words):
-        date = dt.datetime.now() - dt.timedelta(days=7 * 3 + 1)
-        expected = f"{time_words.past.pre}3 weeks{time_words.past.post}"
-        result = human_dates.time_ago_in_words(date)
-        assert expected == result
-
-    def test_time_years_future(self, time_words):
-        date = dt.datetime.now() + dt.timedelta(days=366 * 4)
-        expected = f"{time_words.future.pre}4 years{time_words.future.post}"
-        result = human_dates.time_ago_in_words(date)
-        assert expected == result
-
-    def test_time_weeks_future(self, time_words):
-        date = dt.datetime.now() + dt.timedelta(days=7 * 3 + 1)
-        expected = f"{time_words.future.pre}3 weeks{time_words.future.post}"
-        result = human_dates.time_ago_in_words(date)
+    def test_end_of_second(self):
+        date = dt.datetime.strptime("Jun 1 2005  1:33.123456PM", "%b %d %Y %I:%M.%f%p")
+        expected = dt.datetime.strptime(
+            "Jun 1 2005  13:33:0.999999", "%b %d %Y %H:%M:%S.%f"
+        )
+        result = human_dates.end_of_second(date)
         assert expected == result

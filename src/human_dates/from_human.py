@@ -1,6 +1,8 @@
 from datetime import datetime
 from calendar import monthrange
 
+from .utils import _parse_time_from_input
+
 
 def beginning_of_year(time=False):
     time = _parse_time_from_input(time)
@@ -103,12 +105,3 @@ def end_of_second(time=False):
 
 
 at_end_of_second = end_of_second
-
-
-def _parse_time_from_input(time=False):
-    t = datetime.utcnow()
-    if type(time) is int:
-        t = datetime.fromtimestamp(time)
-    elif isinstance(time, datetime):
-        t = time
-    return t

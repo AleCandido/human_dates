@@ -1,5 +1,6 @@
+###########
 Human Dates
-===========
+###########
 
 .. image:: https://github.com/AleCandido/human_dates/workflows/test/badge.svg
   :target: https://github.com/AleCandido/human_dates/actions?query=workflow%3Atest
@@ -10,10 +11,12 @@ Human Dates
 .. image:: https://img.shields.io/pypi/dm/human-dates2
   :target: https://pypi.org/project/human-dates2/
 
+|
+
 This is a fork of the original package
 `human_dates <https://github.com/jtushman/human_dates>`_ made by Jonathan Tushman, but currently unmaintained.
 
-Already the original package was based on a `Stack Overflow
+The original package, in turn, was based on a `Stack Overflow
 answer <http://stackoverflow.com/a/1551394/192791>`_, referencing still another
 sources (check the post).
 
