@@ -23,7 +23,7 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     python_requires=">=3.6",
-    install_requires=["sphinx_rtd_theme", "recommonmark", "sphinxcontrib-bibtex",],
+    install_requires=["sphinx", "alabaster", "recommonmark", "sphinxcontrib-bibtex",],
     setup_requires=["wheel"],
     project_urls={
         "Original SO": "http://stackoverflow.com/a/1551394/192791",
