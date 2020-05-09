@@ -1,6 +1,10 @@
 human_dates
 ===========
 
+![test]()
+
+.. image:: https://github.com/AleCandido/human_dates/workflows/test/badge.svg
+  :target: https://github.com/AleCandido/human_dates/actions?query=workflow%3Atest
 .. image:: https://codecov.io/gh/AleCandido/human_dates/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/AleCandido/human_dates
 
