@@ -1,4 +1,4 @@
-human_dates
+Human Dates
 ===========
 
 .. image:: https://github.com/AleCandido/human_dates/workflows/test/badge.svg
@@ -7,8 +7,8 @@ human_dates
   :target: https://codecov.io/gh/AleCandido/human_dates
 .. image:: https://img.shields.io/pypi/v/human-dates2
   :target: https://pypi.org/project/human-dates2/
-
-
+.. image:: https://img.shields.io/pypi/dm/human-dates2
+  :target: https://pypi.org/project/human-dates2/
 
 This is a fork of the original package
 `human_dates <https://github.com/jtushman/human_dates>`_ made by Jonathan Tushman, but currently unmaintained.
