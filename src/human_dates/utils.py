@@ -93,10 +93,7 @@ def _is_future(time, time_ref=None):
     else:
         time_ref = _parse_time_from_input(time_ref, "time_ref")
 
-    if time > time_ref:
-        return True
-    else:
-        return False
+    return time > time_ref:
 
 
 def _is_past(time, time_ref=None):
