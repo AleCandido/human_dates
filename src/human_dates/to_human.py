@@ -1,4 +1,6 @@
-from .utils import _get_time_diff
+import datetime as dt
+
+from .utils import _get_time_diff, _is_future
 
 # Initially taken unabashed from the following StackOverflow Post: http://stackoverflow.com/a/1551394/192791
 def time_ago_in_words(time):
@@ -8,15 +10,14 @@ def time_ago_in_words(time):
         'just now', etc
     """
 
-    diff = _get_time_diff(time)
+    to = "f" if _is_future(time) else "p"
+    if to == "p":
+        diff = _get_time_diff(time)
+    else:
+        diff = _get_time_diff(None, time)
 
     second_diff = abs(diff.seconds)
     day_diff = diff.days
-    if day_diff < 0:
-        day_diff = -day_diff
-        to = "f"
-    else:
-        to = "p"
 
     suffix = dict(f="(future)", p="ago")
 
