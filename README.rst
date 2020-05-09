@@ -1,12 +1,14 @@
 human_dates
 ===========
 
-![test]()
-
 .. image:: https://github.com/AleCandido/human_dates/workflows/test/badge.svg
   :target: https://github.com/AleCandido/human_dates/actions?query=workflow%3Atest
 .. image:: https://codecov.io/gh/AleCandido/human_dates/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/AleCandido/human_dates
+.. image:: https://img.shields.io/pypi/v/human-dates2
+  :target: https://pypi.org/project/human-dates2/
+
+
 
 This is a fork of the original package
 `human_dates <https://github.com/jtushman/human_dates>`_ made by Jonathan Tushman, but currently unmaintained.
