@@ -2,7 +2,8 @@ import datetime as dt
 
 from .utils import _get_time_diff, _is_future
 
-# Initially taken unabashed from the following StackOverflow Post: http://stackoverflow.com/a/1551394/192791
+# Initially taken unabashed from the following StackOverflow Post:
+# http://stackoverflow.com/a/1551394/192791
 def time_ago_in_words(time):
     """
         Get a datetime object or a int() Epoch timestamp and return a
