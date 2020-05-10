@@ -1,5 +1,3 @@
-import datetime as dt
-
 from .utils import _get_time_diff, _is_future
 
 # Initially taken unabashed from the following StackOverflow Post:

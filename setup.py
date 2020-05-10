@@ -1,5 +1,6 @@
-from setuptools import setup, find_packages
 from pathlib import Path
+
+from setuptools import setup, find_packages
 
 here = Path(__file__).absolute().parent
 with open(here / "README.rst", encoding="utf-8") as f:
