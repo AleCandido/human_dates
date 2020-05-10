@@ -22,7 +22,7 @@ from recommonmark.transform import AutoStructify
 # -- Project information -----------------------------------------------------
 
 project = "human-dates"
-copyright = "2020, Alessandro Candido"
+copyright = "2020, Alessandro Candido"  # pylint: disable=redefined-builtin
 author = "Alessandro Candido"
 
 # The short X.Y version

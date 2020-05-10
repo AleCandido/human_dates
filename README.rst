@@ -10,6 +10,8 @@ Human Dates
   :target: https://pypi.org/project/human-dates2/
 .. image:: https://img.shields.io/pypi/dm/human-dates2
   :target: https://pypi.org/project/human-dates2/
+.. image:: https://www.codefactor.io/repository/github/alecandido/human_dates/badge
+  :target: https://www.codefactor.io/repository/github/alecandido/human_dates
 
 |
 
