@@ -19,6 +19,8 @@ def _parse_time_from_input(time, name=""):
         datetime.datetime
             the time object created
     """
+    # __import__("pdb").set_trace()
+
     if time is None:
         return datetime.now()
     elif isinstance(time, numbers.Real):
@@ -89,7 +91,7 @@ def _is_future(time, time_ref=None):
     time = _parse_time_from_input(time, "time")
 
     if time_ref is None:
-        time_ref = datetime.utcnow()
+        time_ref = datetime.now()
     else:
         time_ref = _parse_time_from_input(time_ref, "time_ref")
 
