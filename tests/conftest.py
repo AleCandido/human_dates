@@ -1,23 +1,17 @@
 import pytest
 
-
-# @pytest.fixture
-# def time_words():
-class TimeWords:
+# define words used for pointing to past or future
+class WordsTank:
     pass
 
 
-tw, p, f = [TimeWords() for i in range(3)]
-# past
-p.pre = ""
-p.post = " ago"
-tw.past = p
+past = WordsTank()
+past.pre = ""
+past.post = " ago"
 # future
-f.pre = ""
-f.post = " (future)"
-tw.future = f
-
-# return tw
+future = WordsTank()
+future.pre = ""
+future.post = " (future)"
 
 
 @pytest.fixture
@@ -27,7 +21,7 @@ def templates():
 
     ts = Templates()
 
-    ts.past = f"{tw.past.pre}%s{tw.past.post}"
-    ts.future = f"{tw.future.pre}%s{tw.future.post}"
+    ts.past = f"{past.pre}%s{past.post}"
+    ts.future = f"{future.pre}%s{future.post}"
 
     return ts

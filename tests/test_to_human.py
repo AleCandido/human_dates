@@ -57,5 +57,40 @@ class TestTimeAgoInWords:
         ]
 
     def test_time_one_day(self):
-        self.dates = [-dt.timedelta(hours=25), dt.timedelta(hours=25)]
+        self.dates = [-dt.timedelta(hours=24.1), dt.timedelta(hours=24.5)]
         self.expected = ["yesterday", "tomorrow"]
+
+    def test_time_hours(self):
+        self.dates = [
+            -dt.timedelta(hours=17.1),
+            dt.timedelta(hours=5.1),
+            -dt.timedelta(minutes=75),
+        ]
+        self.expected = [
+            self.templates.past % "17 hours",
+            self.templates.future % "5 hours",
+            self.templates.past % "an hour",
+        ]
+
+    def test_time_minutes(self):
+        self.dates = [
+            -dt.timedelta(minutes=41.3),
+            dt.timedelta(minutes=26.3),
+            dt.timedelta(seconds=67),
+        ]
+        self.expected = [
+            self.templates.past % "41 minutes",
+            self.templates.future % "26 minutes",
+            self.templates.future % "a minute",
+        ]
+
+    def test_time_seconds(self):
+        self.dates = [-dt.timedelta(seconds=19.3), dt.timedelta(seconds=45.8)]
+        self.expected = [
+            self.templates.past % "19 seconds",
+            self.templates.future % "45 seconds",
+        ]
+
+    def test_time_now(self):
+        self.dates = [-dt.timedelta(seconds=3.7), dt.timedelta(seconds=8.1)]
+        self.expected = ["just now"] * 2
