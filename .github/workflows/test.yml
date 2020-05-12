@@ -18,7 +18,7 @@ jobs:
         pip install -e .
     - name: Generate coverage report
       run: |
-        pip install pytest pytest-cov
+        pip install -r test_requirements.txt
         pytest --cov-report=xml
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
