@@ -39,13 +39,13 @@ def time_ago_in_words(time):
         return f"{day_diff} days {suffix[to]}"
     elif day_diff < 31:
         w = int(day_diff // 7)
-        return f"{w} weeks {suffix[to]}" if w > 1 else "a week {suffix[to]}"
+        return f"{w} weeks {suffix[to]}" if w > 1 else f"a week {suffix[to]}"
     elif day_diff < 365:
         m = int(day_diff // 30)
-        return f"{m} months {suffix[to]}" if m > 1 else "a month {suffix[to]}"
+        return f"{m} months {suffix[to]}" if m > 1 else f"a month {suffix[to]}"
     else:
         y = int(day_diff // 365)
-        return f"{y} years {suffix[to]}" if y > 1 else "a year {suffix[to]}"
+        return f"{y} years {suffix[to]}" if y > 1 else f"a year {suffix[to]}"
 
 
 human_dates = hd = time_ago_in_words
