@@ -6,7 +6,12 @@ def time_ago_in_words(time):
     """
     Get a datetime object or a int() Epoch timestamp and return a
     pretty string like 'an hour ago', 'Yesterday', '3 months ago',
-    'just now', etc
+    'just now', etc.
+    
+    If more `time` is more than one day far from `now`, then the 
+    difference will take care only of dates (e.g.: ``time = 
+    23:59 01/01/2020``, and ``now = 00:01 03/01/2020`` the result
+    will be ``"two days ago"`` as well).
     """
 
     to = "f" if _is_future(time) else "p"
