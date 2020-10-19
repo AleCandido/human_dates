@@ -8,7 +8,7 @@ with open(here / "README.rst", encoding="utf-8") as f:
 
 setup(
     name="human-dates2",
-    version="1.0.2",
+    version="1.1.0",
     description="Dates for humans",
     long_description=long_description,
     url="https://github.com/AleCandido/human_dates",
