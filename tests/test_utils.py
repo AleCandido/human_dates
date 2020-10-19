@@ -7,7 +7,7 @@ import human_dates
 
 
 class TestUtils:
-    timestamps = [213, 391.1234, 2198348, 14]
+    timestamps = [213, 391.1234, 2198348, 14, 1e7]
 
     def test_input_parser(self):
         datetimes = [dt.datetime.fromtimestamp(ts) for ts in self.timestamps]
@@ -50,6 +50,13 @@ class TestUtils:
                     assert human_dates.utils._get_time_diff(x, y) == dt.timedelta(
                         seconds=(y - x)
                     )
+
+    def test_calendar_diff(self):
+        for x, y in itertools.product(self.timestamps, self.timestamps):
+            diff = human_dates.utils._get_calendar_diff(x, y).days
+            assert abs(diff) <= abs(dt.timedelta(seconds=(y - x)).days)
+            if x >= y:
+                diff <= 0
 
     def test_in_future(self):
         for x, y in itertools.product(self.timestamps, self.timestamps):
